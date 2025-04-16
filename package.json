@@ -1,0 +1,22 @@
+{
+  "name": "moonwave",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/image": "^0.18.0",
+    "@astrojs/react": "^4.2.4",
+    "@tailwindcss/vite": "^4.1.4",
+    "astro": "^5.6.2",
+    "gsap": "^3.12.7",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "split-type": "^0.3.4",
+    "tailwindcss": "^4.1.4"
+  }
+}

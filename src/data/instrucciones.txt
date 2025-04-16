@@ -1,0 +1,1 @@
+JSONs o arrays con data fija (catálogo, historia, etc.)

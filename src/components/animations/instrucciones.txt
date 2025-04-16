@@ -1,0 +1,1 @@
+Componentes con GSAP (grafitis, hero animado, etc.)
