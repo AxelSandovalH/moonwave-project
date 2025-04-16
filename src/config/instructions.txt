@@ -1,0 +1,1 @@
+Config general (rutas, constantes, textos estáticos)
