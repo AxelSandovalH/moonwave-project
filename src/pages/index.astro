@@ -2,18 +2,26 @@
 import "../styles/global.css";
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-import ScrollAnimation from '../components/animations/SplashScreen.jsx';
+import SplashScreen from '../components/animations/SplashScreen.jsx';
 import Hero from '../components/sections/Hero.astro'
 import ScrollHistory from '../components/animations/ScrollHistory.jsx'
 import Catalog from "../components/sections/Catalog.astro";
 import Announcement from "../components/sections/Announcement.astro";
+import Graffiti from "../components/sections/Graffiti.jsx"
+import Coffee from "../components/sections/Coffee.jsx"
+import Falling from "../components/animations/Falling.jsx"
+import Footer from "../components/sections/Footer.jsx";
 
 ---
 
 <Layout>
-	<ScrollAnimation client:load />
+	<SplashScreen client:load />
 	<Hero />
 	<ScrollHistory client:load />
 	<Catalog />
 	<Announcement />
+	<Graffiti client:load />
+	<Coffee />
+	<Falling client:load/>
+	<Footer />
 </Layout>
