@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { CSSPlugin } from 'gsap/CSSPlugin';
 
-// Solo registrar plugins en el cliente
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(CSSPlugin);
 }
@@ -19,7 +18,6 @@ const SplashScreen = () => {
 
     const tl = gsap.timeline();
 
-    // Animación inicial
     tl.fromTo(containerRef.current,
       { y: '0%' },
       { y: '0%', duration: 0.5, ease: 'power3.out' }
@@ -33,13 +31,11 @@ const SplashScreen = () => {
       duration: 1,
       ease: 'power2.inOut',
     })
-    // Animación de transición a nueva sección
     .to(containerRef.current, {
       y: '-100%',
       duration: 1,
       ease: 'power2.inOut',
     }, '+=0.5')
-    // Animación de entrada del nuevo contenido
     .fromTo(contentRef.current,
       { opacity: 0, y: '50%' },
       { opacity: 1, y: '0%', duration: 1, ease: 'power3.out' },
@@ -57,13 +53,12 @@ const SplashScreen = () => {
 
   return (
     <div ref={containerRef} className="fixed inset-0 bg-black flex flex-col items-center justify-center z-50 overflow-hidden">
-      {/* Sección inicial */}
       <div className="w-full h-full flex flex-col items-center justify-center">
         <div
           ref={logoRef}
           className="text-4xl font-bold text-white mb-8 transform scale-100"
         >
-          Moonwave
+          MOONWAVE
         </div>
 
         <div className="w-64 h-2 bg-black rounded-full overflow-hidden">
