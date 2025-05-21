@@ -123,7 +123,7 @@ export default function HeroVideo() {
             ref={socialImageRef}
             src={socialImage}
             alt="Social Media"
-            className="absolute bottom-full left-2/12 transform -translate-x-1/2 mb-2 pointer-events-none"
+            className="absolute bottom-full left-2/10 transform -translate-x-1/2 mb-2 pointer-events-none"
           />
           <a
             ref={buttonRef}
