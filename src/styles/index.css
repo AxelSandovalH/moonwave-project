@@ -1,47 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
 @import "tailwindcss";
 
+/* ── Luxury tokens ── */
+:root {
+  --gold:      #C9A96E;
+  --gold-light:#E8D5A3;
+  --gold-dark: #9A7A45;
+  --black:     #0A0A0A;
+  --cream:     #F5F0E8;
+  --gray-mid:  #2A2A2A;
+}
+
+/* ── Base ── */
+html {
+  overflow-x: hidden;
+  background-color: var(--black);
+  color: var(--cream);
+}
+
+body {
+  background-color: var(--black);
+}
+
+/* ── Utility classes ── */
+.font-cormorant { font-family: 'Cormorant Garamond', serif; }
+.font-anton      { font-family: 'Anton', sans-serif; }
+
+.text-gold       { color: var(--gold); }
+.text-cream      { color: var(--cream); }
+.bg-black-rich   { background-color: var(--black); }
+
+/* Gold hairline divider */
+.divider-gold {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto;
+}
+
+/* ── Marquee ── */
 @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  
-  .animate-marquee {
-    animation: marquee 20s linear infinite;
-  }
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
 
-  @media (max-width: 400px) {
-    .history .text-history {
-        font-size: 5rem;
-    } 
-  } 
-
-  @media (max-width: 315px) {
-    .history .text-history {
-        font-size: 4rem;
-    } 
-  }
-
-  @media (max-width: 1024px) {
-    html,
-    body {
-      overflow-x: hidden;
-    }
-  
-  } 
-
-
-
+/* ── Scroll reveal ── */
 .scroll-animation {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
-
 .scroll-animation.animate {
   opacity: 1;
   transform: translateY(0);
 }
 
-  
+/* ── Responsive overflow guard ── */
+@media (max-width: 1024px) {
+  html, body { overflow-x: hidden; }
+}
+@media (max-width: 400px) {
+  .history .text-history { font-size: 5rem; }
+}
+@media (max-width: 315px) {
+  .history .text-history { font-size: 4rem; }
+}

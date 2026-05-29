@@ -1,34 +1,32 @@
 .ticker-container {
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-  }
-  
-  .ticker {
-    display: flex;
-    width: max-content;
-    animation: scroll-left 15s linear infinite;
-  }
-  
-  
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .ticker {
-      animation-duration: 20s;
-    }
-  }
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
 
-  .ticker-trackrrrr {
-    display: flex;
-    gap: 2.5rem;
-    background-color: rgb(168, 124, 84);
-    color: rgb(41, 41, 41);
-  }
+.ticker {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 15s linear infinite;
+}
+
+@keyframes scroll-left {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .ticker { animation-duration: 20s; }
+}
+
+/* Gold luxury ticker */
+.ticker-trackrrrr {
+  display: flex;
+  gap: 2.5rem;
+  background-color: var(--gold);
+  color: var(--black);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
