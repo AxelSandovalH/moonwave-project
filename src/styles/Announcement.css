@@ -1,0 +1,34 @@
+.ticker-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .ticker {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 15s linear infinite;
+  }
+  
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .ticker {
+      animation-duration: 20s;
+    }
+  }
+
+  .ticker-trackrrrr {
+    display: flex;
+    gap: 2.5rem;
+    background-color: rgb(168, 124, 84);
+    color: rgb(41, 41, 41);
+  }
