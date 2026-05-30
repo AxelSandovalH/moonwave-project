@@ -217,8 +217,8 @@ export default function ScrollHistory() {
         opacity: 1,
         scale: 1,
         y: 0,
-        duration: 0.8,
-        stagger: isMobile ? 0.2 : 0.4,
+        duration: 0.35,
+        stagger: isMobile ? 0.08 : 0.12,
         ease: "power3.out",
         scrollTrigger: {
           trigger: horizontalRef.current,
@@ -245,7 +245,7 @@ export default function ScrollHistory() {
           isMobile ? "flex-col" : "flex-row"
         } gap-5 md:gap-0`}
       >
-        <div className="w-full sm:min-w-7/12 lg:min-w-6/12 2xl:min-w-5/12 sm:h-[80vh] flex items-center justify-center lg:justify-end">
+        <div className="w-full sm:min-w-7/12 lg:min-w-6/12 2xl:min-w-5/12 sm:h-[70vh] flex items-center justify-center lg:justify-end">
           <div 
             ref={textContainerRef}
             className="text-history flex flex-col text-5xl sm:text-8xl md:text-9xl mt-10 sm:mt-20 sm:w-auto text-center sm:text-left"
@@ -264,7 +264,7 @@ export default function ScrollHistory() {
         {[10, -10, 10, -10].map((rotation, index) => (
           <div
             key={index}
-            className="w-full sm:min-w-full h-auto sm:h-[80vh] flex items-center justify-center z-50 py-8"
+            className="w-full sm:min-w-full h-auto sm:h-[70vh] flex items-center justify-center z-50 py-4"
           >
             <HistoryCard rotate={rotation} />
           </div>

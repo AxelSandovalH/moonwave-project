@@ -1,39 +1,48 @@
-import React, { useEffect } from 'react'
+import React, { useRef } from 'react';
 import { gsap } from 'gsap';
 
-export default function Product ({ rotation, modelRotation, textRotation, priceRotation, shirt, shirtModel, backgroundColor, textColor}) {
-  // Agrega este efecto
-useEffect(() => {
-  const img = gsap.to(`.${rotation.replace(' ', '')} img`, {
-    y: 15,
-    duration: 2,
-    repeat: -1,
-    yoyo: true,
-    ease: "power1.inOut"
-  });
-  return () => img.kill();
-}, [rotation]);
+export default function Product({ rotation, shirt, backgroundColor }) {
+  const cardRef = useRef(null);
+
+  const handleEnter = () => {
+    gsap.to(cardRef.current, { y: -6, scale: 1.03, duration: 0.25, ease: 'power2.out' });
+  };
+
+  const handleLeave = () => {
+    gsap.to(cardRef.current, { y: 0, scale: 1, duration: 0.25, ease: 'power2.inOut' });
+  };
 
   return (
-      <div className={`relative group w-11/12 ${rotation}`}>
-        <div className={`fondo ${backgroundColor} w-8/12 h-8/12 rounded-full absolute top-8 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
-
+    <div
+      ref={cardRef}
+      className={`relative w-11/12 ${rotation} cursor-pointer`}
+      style={{ transition: 'box-shadow 0.25s' }}
+      onMouseEnter={handleEnter}
+      onMouseLeave={handleLeave}
+    >
+      {/* Producto */}
+      <div className="overflow-hidden rounded-sm" style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.18)' }}>
         <img
-          className='relative z-50 scroll-animation'
+          className="w-full object-cover"
           src={shirt}
-          alt=""
+          alt="producto moonwave"
         />
-
-        <img
-          className={`imagen-modelo z-50 absolute top-2 left-38 w-4/9 ${modelRotation} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
-          src={shirtModel}
-          alt=""
-        />
-
-        <div className={`text-center w-6/12 relative -top-4 left-25 ${textRotation} flex flex-col items-center scroll-animation`}>
-          <h1 className='text-2xl'>MOONWAVE SHIRT</h1>
-          <h1 className={`text-2xl ${backgroundColor} w-fit px-3 relative ${priceRotation} border-4 border-[#f1e6d4] -top-1 ${textColor}`}>$499</h1>
-        </div>
       </div>
-  )
+
+      {/* Info siempre visible */}
+      <div className="flex justify-between items-center mt-2 px-1">
+        <div>
+          <p className="font-cormorant text-[10px] tracking-[0.2em] uppercase text-[var(--gold)]">
+            Moonwave
+          </p>
+          <p className="font-anton text-sm tracking-wide leading-tight text-[#0A0A0A]">
+            New Wave
+          </p>
+        </div>
+        <span className="font-cormorant text-xs font-semibold tracking-widest text-[#0A0A0A]">
+          $499
+        </span>
+      </div>
+    </div>
+  );
 }

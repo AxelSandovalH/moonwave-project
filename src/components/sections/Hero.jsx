@@ -53,7 +53,7 @@ export default function HeroVideo() {
       <img
         src={heroBg}
         alt=""
-        className="absolute top-0 left-0 w-full h-full object-cover object-top"
+        className="absolute top-0 left-0 w-full h-full object-cover object-[center_65%]"
       />
 
       {/* Luxury scrim */}
@@ -63,7 +63,7 @@ export default function HeroVideo() {
 
         {/* Brand mark */}
         <div className="mt-8 flex flex-col items-center gap-1">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl hero-bomb">
+          <h1 className="text-4xl md:text-5xl font-anton tracking-widest hero-brand">
             MOONWAVE
           </h1>
           <p className="font-cormorant italic text-lg md:text-xl tracking-[0.3em]"
