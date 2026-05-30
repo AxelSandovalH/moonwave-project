@@ -26,19 +26,14 @@ const TextSplitReveal = ({ text, className, triggerElement }) => {
 
       gsap.to(split.chars, {
         scrollTrigger: {
-          trigger: triggerElement || textRef.current,
-          start: "top 70%",
-          end: "bottom 20%",
-          toggleActions: "play reverse play reverse",
-          // o bien, usa scrub si quieres que la animación esté ligada al scroll:
-          // scrub: true,
-          markers: false, // cambia a true si quieres ver los puntos de disparo
-          once: false
-        },        
+          trigger: textRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
         opacity: 1,
         y: 0,
-        duration: 0.6,
-        stagger: 0.04,
+        duration: 0.5,
+        stagger: 0.03,
         ease: "power3.out",
       });
     }, textRef);
