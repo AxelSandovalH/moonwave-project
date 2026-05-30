@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import video from '@assets/video.mp4';
+import heroBg from '@assets/images/products/producto-1-hoodie-negra-espalda.jpg';
 import socialImage from '@assets/images/characters/cartel mnw.png';
 import '@styles/hero.css';
 import { gsap } from 'gsap';
@@ -50,12 +50,11 @@ export default function HeroVideo() {
 
   return (
     <section className="relative overflow-hidden">
-      <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        autoPlay muted loop
-      >
-        <source src={video} type="video/mp4" />
-      </video>
+      <img
+        src={heroBg}
+        alt=""
+        className="absolute top-0 left-0 w-full h-full object-cover object-top"
+      />
 
       {/* Luxury scrim */}
       <div className="absolute inset-0 hero-scrim z-10" />
