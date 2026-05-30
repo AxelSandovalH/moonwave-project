@@ -2,23 +2,23 @@ html {
   overflow-x: hidden;
 }
 
-/* Gold shimmer on brand name */
-.hero-brand {
-  background: linear-gradient(
-    90deg,
-    var(--cream) 0%,
-    var(--gold-light) 40%,
-    var(--gold) 50%,
-    var(--gold-light) 60%,
-    var(--cream) 100%
-  );
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: shimmer 4s linear infinite;
+/* ── Bomb graffiti — MOONWAVE ── */
+.hero-bomb {
+  font-family: 'Lilita One', cursive;
+  color: #ffffff;
+  -webkit-text-stroke: 5px #000;
+  paint-order: stroke fill;
+  text-shadow:
+    4px  4px 0 #000,
+   -2px -2px 0 #000,
+    6px  8px 0 rgba(0,0,0,0.35);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  /* subtle spray-paint glow */
+  filter: drop-shadow(0 0 18px rgba(255,255,255,0.15));
 }
 
+/* Gold shimmer — kept for tagline use */
 @keyframes shimmer {
   0%   { background-position: 200% center; }
   100% { background-position: -200% center; }
