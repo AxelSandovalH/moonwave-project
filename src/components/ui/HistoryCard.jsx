@@ -127,7 +127,7 @@ export default function HistoryCard({ rotate }) {
   return (
     <div
       ref={cardRef}
-      className="bg-[#FFF4DC] p-5 rounded-2xl w-11/12 sm:w-10/12 md:w-8/12 lg:w-7/12 2xl:w-6/12 h-9/12 md:h-10/12 z-50 shadow-2xl flex flex-col items-center justify-start transform transition-all duration-300"
+      className="bg-[#FFF4DC] text-[#0A0A0A] p-5 rounded-2xl w-11/12 sm:w-10/12 md:w-8/12 lg:w-7/12 2xl:w-6/12 h-9/12 md:h-10/12 z-50 shadow-2xl flex flex-col items-center justify-start transform transition-all duration-300"
       style={{ 
         transform: `rotate(${rotate}deg)`,
         transformStyle: "preserve-3d"
