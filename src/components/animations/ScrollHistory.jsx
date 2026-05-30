@@ -237,7 +237,7 @@ export default function ScrollHistory() {
   return (
     <div
       ref={containerRef}
-      className="history relative bg-[#F6EBD3] font-anton anton-regular h-auto lg:h-screen z-50"
+      className="history relative bg-[#F6EBD3] text-[#0A0A0A] font-anton anton-regular h-auto lg:h-screen z-50"
     >
       <div
         ref={horizontalRef}

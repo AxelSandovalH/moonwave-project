@@ -184,7 +184,7 @@ export default function Catalog() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative w-full min-h-screen bg-[#fef1dc] pb-12">
+    <section ref={sectionRef} className="relative w-full min-h-screen bg-[#fef1dc] text-[#0A0A0A] pb-12">
       <img
         src={HistorySection}
         className="w-full h-full relative -top-12 m-0 hidden sm:block"

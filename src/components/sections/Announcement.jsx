@@ -259,7 +259,7 @@ export default function Announcement() {
   );
 
   return (
-    <section ref={sectionRef} className="bg-[#F6EBD3] overflow-hidden relative">
+    <section ref={sectionRef} className="bg-[#F6EBD3] text-[#0A0A0A] overflow-hidden relative">
       {/* Contenedor del cohete con posición absoluta para superponerlo */}
       <div className="rocket-container absolute w-full h-full pointer-events-none z-50">
         <img 

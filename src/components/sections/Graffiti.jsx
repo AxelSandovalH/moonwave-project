@@ -117,7 +117,7 @@ export default function Graffiti() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-[#F6EBD3] px-6 py-10 relative overflow-hidden">
+    <section ref={sectionRef} className="bg-[#F6EBD3] text-[#0A0A0A] px-6 py-10 relative overflow-hidden">
       <div className="max-w-[1800px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center">
         <div className="md:translate-y-20" ref={card1Ref}>
           <GraffitiCard graffitiImage={graffiti1} rotation="-rotate-6" />
