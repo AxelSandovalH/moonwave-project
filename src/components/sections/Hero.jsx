@@ -49,10 +49,11 @@ export default function HeroVideo() {
   };
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative h-screen overflow-hidden">
       <img
         src={heroBg}
         alt=""
+        fetchPriority="high"
         className="absolute top-0 left-0 w-full h-full object-cover object-[center_65%]"
       />
 
