@@ -196,9 +196,6 @@ export default function Catalog() {
         <div ref={productRefs.current[0]} className="translate-y-12 sm:translate-y-0 translate-10 sm:translate-x-0 w-full">
           <Product
             rotation="-rotate-12"
-            modelRotation="rotate-10"
-            textRotation="-rotate-2"
-            priceRotation="-rotate-8"
             shirt={p1Flat}
             shirtModel={p1Model}
             backgroundColor="bg-zinc-900"
@@ -209,9 +206,6 @@ export default function Catalog() {
         <div ref={productRefs.current[1]} className="translate-y-12 translate-x-12 w-full">
           <Product
             rotation="rotate-0"
-            modelRotation="rotate-0"
-            textRotation="rotate-0"
-            priceRotation="rotate-0"
             shirt={p2Flat}
             shirtModel={p2Model}
             backgroundColor="bg-stone-200"
@@ -222,9 +216,6 @@ export default function Catalog() {
         <div ref={productRefs.current[2]} className="w-full">
           <Product
             rotation="rotate-12"
-            modelRotation="rotate-8"
-            textRotation="-rotate-2"
-            priceRotation="rotate-8"
             shirt={p3Flat}
             shirtModel={p3Model}
             backgroundColor="bg-teal-500"
@@ -235,9 +226,6 @@ export default function Catalog() {
         <div ref={productRefs.current[3]} className="w-full">
           <Product
             rotation="-rotate-6"
-            modelRotation="rotate-4"
-            textRotation="-rotate-2"
-            priceRotation="rotate-4"
             shirt={p4Flat}
             shirtModel={p4Model}
             backgroundColor="bg-sky-400"
@@ -257,9 +245,6 @@ export default function Catalog() {
         <div ref={productRefs.current[4]} className="lg:col-auto lg:row-auto lg:w-full lg:translate-x-20 sm:col-span-2 sm:col-start-1 sm:row-start-3">
           <Product
             rotation="-rotate-12"
-            modelRotation="rotate-10"
-            textRotation="-rotate-2"
-            priceRotation="-rotate-8"
             shirt={p5Flat}
             shirtModel={p5Model}
             backgroundColor="bg-blue-700"
